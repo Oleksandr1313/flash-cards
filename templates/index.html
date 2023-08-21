@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="static/main.css">
+    <title>Flashcards</title>
+  </head>
+  <body>
+    <div class="grid">
+      {% for element in all_data %}
+          <div class="rotating-text">
+            <img src="data:image/jpeg;base64,{{ element[2] }}" alt="Picture">
+            <div class="front-text">{{element[0]}}</div>
+            <div class="back-text">{{element[1]}}</div>
+          </div>
+      {% endfor %}
+    </div>
+  </body>
+</html>
